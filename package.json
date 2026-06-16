@@ -1,0 +1,27 @@
+{
+  "name": "PMA3Uni",
+  "version": "1.0.0",
+  "description": "",
+  
+  "main": "index.js",
+  
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/menu.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.6.0",
+      "onFail": "download"
+    }
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3"
+  }
+}
