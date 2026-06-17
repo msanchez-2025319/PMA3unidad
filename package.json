@@ -2,9 +2,7 @@
   "name": "PMA3Uni",
   "version": "1.0.0",
   "description": "",
-  
   "main": "index.js",
-  
   "scripts": {
     "build": "tsc",
     "start": "node dist/menu.js"
@@ -21,7 +19,16 @@
   },
   "type": "module",
   "devDependencies": {
+    "@angular/cli": "^22.0.1",
+    "@angular/compiler-cli": "^22.0.1",
     "@types/node": "^25.9.3",
     "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@angular/common": "^22.0.1",
+    "@angular/compiler": "^22.0.1",
+    "@angular/core": "^22.0.1",
+    "@angular/forms": "^22.0.1",
+    "@angular/platform-browser": "^22.0.1"
   }
 }
