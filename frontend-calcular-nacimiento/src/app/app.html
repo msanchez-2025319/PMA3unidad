@@ -1,0 +1,35 @@
+<!-- src/app/app.html -->
+<div class="container">
+  <h1>📅 Calculadora de Año de Nacimiento</h1>
+  
+  <div class="input-group">
+    <label for="edad">Ingresa tu edad:</label>
+    <input 
+      type="number" 
+      id="edad"
+      [(ngModel)]="edad" 
+      placeholder="Ejemplo: 25"
+      min="1"
+      max="120"
+    >
+  </div>
+
+  <div class="button-group">
+    <button (click)="calcularAnioNacimiento()" class="btn-primary">  <!-- ← Cambiado -->
+      Calcular Año de Nacimiento
+    </button>
+    <button (click)="limpiar()" class="btn-secondary">
+      Limpiar
+    </button>
+  </div>
+
+  <div *ngIf="error" class="error">
+    ⚠️ {{ error }}
+  </div>
+
+  <div *ngIf="anioNacimiento !== null && !error" class="resultado">  <!-- ← Cambiado -->
+    <h2>Resultado:</h2>
+    <p>Si tienes <strong>{{ edad }}</strong> años, naciste en el año <strong>{{ anioNacimiento }}</strong></p>  <!-- ← Cambiado -->
+    <p class="nota">* Basado en el año actual ({{ getYear() }})</p>
+  </div>
+</div>
