@@ -8,8 +8,9 @@ export const interfaz = readline.createInterface({
 export function pedirNumero(mensaje: string): Promise<number> {
   return new Promise((resolve) => {
     interfaz.question(mensaje, (respuesta) => {
-      const numero = Number(respuesta);
-      if (isNaN(numero)) {
+      const texto = respuesta.trim();
+      const numero = Number(texto);
+      if (texto === '' || isNaN(numero)) {
         console.log('Ingrese un número válido');
         resolve(pedirNumero(mensaje));
       } else {
@@ -25,4 +26,8 @@ export function pedirTexto(mensaje: string): Promise<string> {
       resolve(respuesta);
     });
   });
+}
+
+export function cerrarInterfaz(): void {
+  interfaz.close();
 }
